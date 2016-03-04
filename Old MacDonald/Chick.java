@@ -9,29 +9,29 @@ public class Chick implements Animal{
     private String myType;
     private String mySound;
     private String secondSound;
-    private boolean hasTwoSounds;
     //constructor for Chick with two parameters
     Chick(String myType, String mySound){
         this.myType=myType;
         this.mySound=mySound;
     }
+    //second constructor for chick with two different sounds
     Chick(String myType, String mySound, String secondSound){
         this.myType=myType;
         this.mySound=mySound;
-        this.hasTwoSounds=true;
+        this.secondSound=secondSound;
     }
-    //returns Chick sound
+    //returns Chick sound, if the chick has two sounds, it will pick one randomly
     public String getSound(){
-        if(hasTwoSounds){
-            return(mySound);
-        }
-        else{
+        if(secondSound instanceof String){
             if(Math.random()<.5){
                 return(mySound);
             }
             else{
                 return(secondSound);
             }
+        }
+        else{
+            return(mySound);
         }
     }
     //returns Chick type
