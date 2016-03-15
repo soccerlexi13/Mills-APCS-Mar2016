@@ -12,5 +12,18 @@ public class DeckTester {
         String[] suitA={"clubs", "hearts", "diamonds", "spades"};
         int[] valueA={10, 10, 8, 3};
         Deck deck1=new Deck(rankA, suitA, valueA);
+        System.out.println(deck1);
+        
+        String[] rankB={"Queen", "Jack", "8", "3"};
+        String[] suitB={"clubs", "hearts", "diamonds", "spades"};
+        int[] valueB={10, 10, 8, 3};
+        Deck deck2=new Deck(rankB, suitB, valueB);
+        System.out.println(deck2);
+        
+        String[] rankC={"Queen", "Jack", "8", "3"};
+        String[] suitC={"clubs", "hearts", "diamonds", "spades"};
+        int[] valueC={10, 10, 8, 3};
+        Deck deck3=new Deck(rankC, suitC, valueC);
+        System.out.println(deck3);
     }
 }
